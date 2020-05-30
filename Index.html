@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+    <title>CodeRevue03CarInsurance</title>
+    <link rel="stylesheet" type="text/css" href="IndexStyle.css">
+</head>
+<body>
+        <div class="header">
+            <!--<div class="logoBanner"> </div>-->
+                <img class="imL" src="img/logo.png">
+                <img class="imR" src ="img/banner.png">
+                 
+        </div>
+        <div id="navigation">
+        <nav id = "nav">
+            <ul>
+                <li>Home</li>
+                <li>Team</li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+
+        <h1>Car insurance</h1>
+
+        <div class="container">
+            <div id = "traffi">
+            <img src="img/traffic-332857_1920.jpg">
+            <h3> Un-complicating car coverage<br>
+    Understanding your coverage options shoulddn't be so hard.<br>
+            We'll guide you through available coverage types,<br>
+                starting with who and  whats is covered.
+            </h3>
+            </div>
+        </div>
+
+    <div class="beyondGreyBox">
+        <div id="left">
+            <h4>WhatComesStandard</h4><br>
+            <p>The coverage you need</p><br>
+            <ol>
+                <li>Bodily Injury Liability</li>
+                <li>Property Damage</li>
+                <li>Medical Payments</li>
+            </ol>
+            <br>
+            <h5>Benefits</h5>
+            <p>12-month rate guarantee | 24/7 customer<br>
+                service | Lifetime Repair Guarantee</p>
+        </div>
+        <div id="right">
+            <h4>Add-on protection & coverage</h4><br>
+            <p>Fore more peace of mind</p><br>
+            <ol>
+                <li>Better Car Replacement</li>
+                <li>Towing & Labor</li>
+                <li>Rental Car Coverage</li>
+            </ol>
+            <br>
+            <h5>Earned Benefits</h5>
+            <p>Accident Forgiveness' | New Car<br>
+                Replacement</p>
+        </div>
+    </div>
+
+   <div id="input">
+        <div id="name">
+            <p>Your name:</p>
+            <input id="inputName" type="text">
+        </div>
+
+        <div id="age">
+            <p>Age:</p>
+            <input id="inputAge" type="text">
+        </div>
+
+        <div id="country">
+            <p>Country:</p>
+            <select id="inputCountry">
+                <option value="Austria">Austria</option>
+                <option value="Hungary">Hungary</option>
+                <option value="Greece">Greece</option>
+            </select>
+        </div>
+
+        <div id="hpoyc">
+            <p>Horespower of your car:</p>
+            <input id="inputHpoyc" type="text">
+        </div>
+
+        <button id="calculate" type="button">Calculate</button>
+    </div>
+
+
+
+ <script>
+    var input_name_node=document.getElementById("inputName");
+    var input_age_node=document.getElementById("inputAge");
+    var input_country_node=document.getElementById("inputCountry");
+    var input_horespower_node=document.getElementById("inputHpoyc");
+    var input_button_node=document.getElementById("calculate");
+    var cost = 0;
+
+ 
+    function calculateInsurance(){
+        cost = Number(input_horespower_node.value) * 100 / Number(input_age_node.value) + 50;
+        document.write(cost);
+    }
+
+    input_button_node.addEventListener("click", calculateInsurance, false);
+    </script>
+    </main>
+    <br>
+    <footer>
+        <nav id = "nav2">
+            <ul>
+                <li>Home</li>
+                <li>Team</li>
+            </ul>
+        </nav>
+        <div id = "footerLogo">
+            <div id = "footerlogobox">
+                <img src="img/logo-inv.png">
+            </div>
+        </div>
+        
+    </footer>
+            <p id="name">Udo Riedl - Codefactory 2020</p>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+    <title>CodeRevue03CarInsurance</title>
+    <link rel="stylesheet" type="text/css" href="IndexStyle.css">
+</head>
+<body>
+
+<div id=input>
+        <div id="name">
+            <p>Your name:</p>
+            <input id="inputName" type="text">
+        </div>
+
+        <div id="age">
+            <p>Age:</p>
+            <input id="inputAge" type="text">
+        </div>
+
+        <div id="country">
+            <p>Country:</p>
+            <select id="inputCountry">
+                <option value="Austria">Austria</option>
+                <option value="Hungary">Hungary</option>
+                <option value="Greece">Greece</option>
+            </select>
+        </div>
+
+        <div id="hpoyc">
+            <p>Horespower of your car:</p>
+            <input id="inputHpoyc" type="text">
+        </div>
+
+        <button id="calculate" type="button">Calculate</button>
+    </div>
+
+
+
+ <script>
+    var input_name_node=document.getElementById("inputName");
+    var input_age_node=document.getElementById("inputAge");
+    var input_country_node=document.getElementById("inputCountry");
+    var input_horespower_node=document.getElementById("inputHpoyc");
+    var input_button_node=document.getElementById("calculate");
+    var cost = 0;
+
+ 
+    function calculateInsurance(){
+        cost = Number(input_horespower_node.value) * 100 / Number(input_age_node.value) + 50;
+        document.write(cost);
+    }
+
+    input_button_node.addEventListener("click", calculateInsurance, false);
+    </script>
+</body>
+</html>
